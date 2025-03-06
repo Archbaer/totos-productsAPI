@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eaa35dd-d1b2-4502-9977-d05fba2f4b1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/services/PublicKeyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productsAPI/target/classes/com/totos/productsAPI/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/target/classes/com/totos/productsAPI/config/SecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
