@@ -3,8 +3,12 @@ package com.totos.productsAPI.controllers;
 import com.totos.productsAPI.models.Products;
 import com.totos.productsAPI.services.ProductsService;
 import jakarta.validation.Valid;
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,9 +22,16 @@ public class ProductController {
 
     @GetMapping("/test")
     public String testEndpoint() {
-        Products produto = new Products("Bolacha", "Biscoito bom", 7.99, 9);
-        productService.createProduct(produto);
-        return "Sample product created";
+        return "You are at test endpoint!";
+    }
+
+    @GetMapping("/debug")
+    public ResponseEntity<?> debugRoles() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        System.out.println("Authenticated User: " + auth.getName());
+        System.out.println("Authorities: " + auth.getAuthorities());
+
+        return ResponseEntity.ok(auth.getAuthorities());
     }
 
     @GetMapping
@@ -29,6 +40,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
     public Products getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }

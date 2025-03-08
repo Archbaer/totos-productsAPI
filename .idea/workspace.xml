@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eaa35dd-d1b2-4502-9977-d05fba2f4b1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/services/PublicKeyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/src/main/java/com/totos/productsAPI/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsAPI/target/classes/com/totos/productsAPI/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/productsAPI/target/classes/com/totos/productsAPI/controllers/ProductController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,22 +25,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Archbaer"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Archbaer&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Archbaer/totos-productsAPI",
-    "accountId": "6c0a63cf-72c8-405b-acf3-106712d036c0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Archbaer/totos-productsAPI&quot;,
+    &quot;accountId&quot;: &quot;6c0a63cf-72c8-405b-acf3-106712d036c0&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2twX2GpMzmpWjusFlxxopFZcOTi" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,16 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ProductsApiApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/totos-usersAPI"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ProductsApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/totos-usersAPI&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ProductsApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.totos.productsAPI.ProductsApiApplication" />

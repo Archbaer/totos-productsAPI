@@ -49,8 +49,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                         .parseClaimsJws(token)
                         .getBody();
 
+
+
                 // Extract roles and create authentication
                 List<SimpleGrantedAuthority> authorities = extractAuthorities(claims);
+                System.out.println("Autoridades: " + authorities);
 
                 // Authentication object
                 Authentication authentication = new UsernamePasswordAuthenticationToken(
@@ -61,6 +64,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                 // Set authentication in security context
                 SecurityContextHolder.getContext().setAuthentication(authentication);
+                System.out.println("SECURITY CONTEXT HOLDER: "+ SecurityContextHolder.getContext().getAuthentication());
             } catch (Exception e) {
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 return;
@@ -80,6 +84,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private List<SimpleGrantedAuthority> extractAuthorities(Claims claims) {
         String role = claims.get("role", String.class);
+        System.out.println("Role: " + role);
         return role != null
                 ? Collections.singletonList(new SimpleGrantedAuthority("ROLE_"+ role))
                 : Collections.emptyList();
