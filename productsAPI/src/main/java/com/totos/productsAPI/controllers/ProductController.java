@@ -7,8 +7,6 @@ import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,14 +23,6 @@ public class ProductController {
         return "You are at test endpoint!";
     }
 
-    @GetMapping("/debug")
-    public ResponseEntity<?> debugRoles() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println("Authenticated User: " + auth.getName());
-        System.out.println("Authorities: " + auth.getAuthorities());
-
-        return ResponseEntity.ok(auth.getAuthorities());
-    }
 
     @GetMapping
     public List<Products> getAllProducts() {
@@ -46,19 +36,19 @@ public class ProductController {
     }
 
     @PostMapping
-    // @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
     public Products createProduct(@Valid @RequestBody Products product) {
         return productService.createProduct(product);
     }
 
     @PutMapping("/{id}")
-    // @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
+     @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
     public Products updateProduct(@PathVariable Long id, @Valid @RequestBody Products product) {
         return productService.updateProduct(id, product);
     }
 
     @DeleteMapping("/{id}")
-    // @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
+     @PreAuthorize("hasRole('ADMIN') or hasRole('API')")
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
     }

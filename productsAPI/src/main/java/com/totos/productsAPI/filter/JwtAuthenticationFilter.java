@@ -36,7 +36,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         // Extract JWT Token from Authorization Header
         String token = extractJwtToken(request);
 
-        // If token exists, if will validate it
+        // If token exists, it will validate
         if (token != null) {
             try {
                 // Fetch public key
@@ -53,7 +53,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                 // Extract roles and create authentication
                 List<SimpleGrantedAuthority> authorities = extractAuthorities(claims);
-                System.out.println("Autoridades: " + authorities);
+
+                System.out.println("Authorities: " + authorities);
 
                 // Authentication object
                 Authentication authentication = new UsernamePasswordAuthenticationToken(
@@ -64,7 +65,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                 // Set authentication in security context
                 SecurityContextHolder.getContext().setAuthentication(authentication);
-                System.out.println("SECURITY CONTEXT HOLDER: "+ SecurityContextHolder.getContext().getAuthentication());
             } catch (Exception e) {
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 return;
@@ -84,7 +84,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private List<SimpleGrantedAuthority> extractAuthorities(Claims claims) {
         String role = claims.get("role", String.class);
-        System.out.println("Role: " + role);
+        System.out.println("Role: "+ role);
         return role != null
                 ? Collections.singletonList(new SimpleGrantedAuthority("ROLE_"+ role))
                 : Collections.emptyList();
