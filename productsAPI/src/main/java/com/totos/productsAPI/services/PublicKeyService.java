@@ -14,8 +14,8 @@ import java.util.Map;
 @Service
 public class PublicKeyService {
 
-    private static final String LOGIN_ENDPOINT = "http://localhost:8080/api/auth/login";
-    private static final String PUBLIC_KEY_ENDPOINT = "http://localhost:8080/api/auth/public-key";
+    private static final String LOGIN_ENDPOINT = "http://localhost:8081/auth/login";
+    private static final String PUBLIC_KEY_ENDPOINT = "http://localhost:8081/auth/public-key";
 
     private PublicKey cachedPublicKey = null;
 

@@ -34,7 +34,7 @@ public class SecurityConfig {
 
                 // Authorization rules
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/products/**").permitAll()
+                        .requestMatchers("/products/**").permitAll()
                 )
 
                 // Stateless session management
